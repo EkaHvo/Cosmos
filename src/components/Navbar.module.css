@@ -1,0 +1,30 @@
+.nav {
+  grid-area: nav;
+  background-color: #06002a;
+  padding: 15px 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item {
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.item:hover {
+  background-color: #9e6a0a;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.list li:last-child {
+  padding: 40px 0 10px;
+}
