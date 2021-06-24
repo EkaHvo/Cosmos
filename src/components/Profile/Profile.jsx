@@ -4,7 +4,7 @@ import c from './Profile.module.css';
 
 const Profile = () => {
   return (
-    <div className={c.content}>
+    <div>
       <div className={c.personal}>
         <img src='images/avatar.jpg'></img>
         <div className={c.descr}>

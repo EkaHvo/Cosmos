@@ -7,7 +7,7 @@
   font-weight: 500;
 }
 
-.item {
+.nav a {
   display: block;
   padding: 10px 10px;
   text-decoration: none;
@@ -15,16 +15,19 @@
   border-radius: 8px;
 }
 
-.item:hover {
+.nav a:hover {
+  background-color: #473005;
+}
+.nav a.active {
   background-color: #9e6a0a;
 }
 
-.list {
+.nav ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.list li:last-child {
+.nav ul li:last-child {
   padding: 40px 0 10px;
 }
