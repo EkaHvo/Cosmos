@@ -1,0 +1,54 @@
+.postsWrapper {
+  padding: 0 15px;
+  width: 90%;
+}
+
+.postsArea textarea {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  min-height: 140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-image: url(../../../main-banner.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.postsArea textarea::-webkit-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.postsArea textarea:-ms-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.postsArea textarea::-ms-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.postsArea textarea::placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+.btn {
+  margin: 20px 0 30px auto;
+  display: block;
+  padding: 10px 55px;
+  font-size: 18px;
+  color: white;
+  background-color: #06002a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

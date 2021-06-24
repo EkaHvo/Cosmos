@@ -9,11 +9,14 @@ const Navbar = () => {
             <a className={c.item} href="#">Profile</a>
             </li>
           <li>
-            <a className={c.item} href="#">Masages</a>
+            <a className={c.item} href="#">Messages</a>
             </li>
           <li>
             <a className={c.item} href="#">Music</a>
             </li>
+          <li>
+            <a className={c.item} href="#">Friends</a>
+          </li>
           <li>
             <a className={c.item} href="#">News</a>
           </li>
