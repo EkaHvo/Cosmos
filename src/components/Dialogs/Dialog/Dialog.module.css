@@ -1,0 +1,24 @@
+.dialog a{
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #06002a;
+  box-shadow: 0 0 5px #bfbfbf;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dialog:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.dialog a:hover {
+  background-color: #473005;
+  color: white;
+}
+
+.dialog .active {
+  background-color: #9e6a0a;
+  color: white;
+}

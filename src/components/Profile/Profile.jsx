@@ -1,23 +1,13 @@
 import React from 'react';
 import Posts from './Posts/Posts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 import c from './Profile.module.css';
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div>
-      <div className={c.personal}>
-        <img src='images/avatar.jpg'></img>
-        <div className={c.descr}>
-          <h2>
-            Jake Sully
-          </h2>
-          <div className={c.text}>
-            <div>Date of birth: <span>24 August 2126</span></div>
-            <div>Place: <span>Pandora</span></div>
-          </div>
-        </div>
-      </div>
-      <Posts />
+      <ProfileInfo name='Jake Sully' birthday='24 August 2126' place='Pandora'/>
+      <Posts posts={props.posts}/>
     </div>
   )
 }

@@ -2,7 +2,11 @@ import React from 'react';
 import Post from './Post/Post';
 import c from './Posts.module.css';
 
-const Posts = () => {
+const Posts = (props) => {
+  
+  let posts = props.posts;
+  let postElements = posts.map( post => <Post message={post.text} likesCount={post.likesCount}/>);
+
   return (
     <div className={c.postsWrapper}>
       <div className={c.postsArea}>
@@ -11,8 +15,7 @@ const Posts = () => {
         <button className={c.btn}>Send</button>
       </div>
       <div className={c.posts}>
-      <Post message='Hello, friend' likeCount='3'/>
-      <Post message='Hi, bro!'likeCount='8'/>
+        { postElements }
       </div>
     </div>
     

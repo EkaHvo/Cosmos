@@ -10,11 +10,11 @@ const Post = (props) => {
         </div>
         <div className={c.rating}>        
           <div className={c.like}>
-            <span>{props.likeCount}</span>
+            <span>{props.likesCount}</span>
             &#x1F44D;
           </div>
           <div className={c.dislike}>
-            <span>{props.dislikeCount}</span>
+            <span>{props.dislikesCount}</span>
             &#128078;
           </div>
         </div>
