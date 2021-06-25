@@ -6,7 +6,7 @@
 
 .dialogsItems {
   padding-right: 15px;
-  border-right: 2px solid #06002a;;
+  border-right: 2px solid #06002a;
 }
 
 .dialogsItems .active {
@@ -14,9 +14,12 @@
   color: white;
 }
 
-.dialog {
+.dialog a{
+  display: block;
   padding: 10px;
   font-size: 18px;
+  text-decoration: none;
+  color: #06002a;
   box-shadow: 0 0 5px #bfbfbf;
   border-radius: 5px;
   cursor: pointer;
@@ -26,7 +29,7 @@
   margin-bottom: 20px;
 }
 
-.dialog:hover {
+.dialog a:hover {
   background-color: #473005;
   color: white;
 }
