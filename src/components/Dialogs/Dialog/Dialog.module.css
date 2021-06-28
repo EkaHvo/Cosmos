@@ -1,5 +1,6 @@
-.dialog a{
-  display: block;
+.dialog a {
+  display: flex;
+  align-items: center;
   padding: 10px;
   font-size: 18px;
   text-decoration: none;
@@ -21,4 +22,11 @@
 .dialog .active {
   background-color: #9e6a0a;
   color: white;
+}
+
+.dialog img {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+  border-radius: 50%;
 }

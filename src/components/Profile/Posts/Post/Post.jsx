@@ -5,16 +5,16 @@ const Post = (props) => {
   return (
       <div className={c.item}>
         <div className={c.post}>        
-          <img src='images/avatar.jpg'></img>
+          <img src='images/avatar.jpg' alt='my avatar'></img>
           <div className={c.text}>{ props.message }</div>
         </div>
         <div className={c.rating}>        
           <div className={c.like}>
-            <span>{props.likesCount}</span>
+            <span>{ props.likesCount }</span>
             &#x1F44D;
           </div>
           <div className={c.dislike}>
-            <span>{props.dislikesCount}</span>
+            <span>{ props.dislikesCount }</span>
             &#128078;
           </div>
         </div>

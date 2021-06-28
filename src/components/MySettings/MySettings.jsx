@@ -1,5 +1,5 @@
 import React from 'react';
-import c from './MySettings.module.css';
+// import c from './MySettings.module.css';
 
 const MySettings = () => {
   return (

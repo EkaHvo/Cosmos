@@ -8,7 +8,7 @@ const Dialog = (props) => {
   return (
     <div className={c.dialog}>
       <NavLink activeClassName={c.active} to={path}>
-        &#128386; <span>{ props.name }</span>
+        <img src={ props.avatar } alt={ props.alt }></img><span>{ props.name }</span>
       </NavLink>
     </div>
   )

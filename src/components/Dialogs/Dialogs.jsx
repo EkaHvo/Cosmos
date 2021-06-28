@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import Dialog from './Dialog/Dialog';
 import Message from './Message/Message';
 import c from './Dialogs.module.css';
@@ -7,11 +6,16 @@ import c from './Dialogs.module.css';
 
 const Dialogs = (props) => {
 
-  let dialogs = props.dialogs;
-  let messages = props.messages;
+  let dialogElements = props.state.dialogs.map( dialog => <Dialog name={dialog.name} avatar={dialog.avatar} id={dialog.id}/>);
 
-  let dialogElements = dialogs.map(dialog => <Dialog name={dialog.name} id={dialog.id}/>);
-  let messagesElements = messages.map(message => <Message text={message.text} />);
+  let messagesElements = props.state.messages.map( message => <Message text={message.text} author={message.author} id={message.id} avatar={message.avatar}/>);
+
+  let newMessage = React.createRef();
+
+  let addMessage = () => {
+    let text = newMessage.current.value;
+    alert(text);
+  }
 
   return (
     <div className={c.dialogs}>
@@ -20,6 +24,8 @@ const Dialogs = (props) => {
       </div>
       <div className={c.messages}>
         { messagesElements }
+        <textarea ref={newMessage} className={c.newMessage}>my message</textarea>
+        <button onClick={addMessage} className={c.btn}>Add</button>
       </div>
     </div>
   )
