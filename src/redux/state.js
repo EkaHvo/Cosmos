@@ -1,7 +1,6 @@
-const ADD_POST = 'ADD-POST';
-const APDATE_POST_TEXT = 'APDATE-POST-TEXT';
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const APDATE_MESSAGE_TEXT = 'APDATE-MESSAGE-TEXT';
+import dialogsReducer from "./dialods-reducer";
+import profileReducer from "./profile-reducer";
+import navbarReducer from "./navbar-reducer";
 
 let store = {
   _state: {
@@ -49,39 +48,11 @@ let store = {
   },
 
   dispatch(action){
+    this._state.dialogsState = dialogsReducer(this._state.dialogsState, action);
+    this._state.profileState = profileReducer(this._state.profileState, action);
+    this._state.navbarState = navbarReducer(this._state.navbarState, action);
 
-    switch (action.type) {
-      case ADD_POST :
-        let newPost = {
-          id: 1,
-          text: this._state.profileState.newPostText,
-          likesCount: 0
-        };
-        this._state.profileState.posts.push(newPost);
-        this._state.profileState.newPostText ='';
-        this._callSubscriber();
-      break;
-      case APDATE_POST_TEXT :
-        this._state.profileState.newPostText = action.newText;
-        this._callSubscriber();
-      break;
-      case ADD_MESSAGE :
-        let newMessage = {
-          id: 1,
-          text: this._state.dialogsState.newMessageText,
-          author: 'Jake', 
-          avatar:'https://s2.cdn.teleprogramma.pro/wp-content/uploads/2020/01/a76ebd11ecf1ab90a360b056f49b90a0.jpg', 
-          alt:'avatar Jake'
-        };
-        this._state.dialogsState.messages.push(newMessage);
-        this._state.dialogsState.newMessageText ='';
-        this._callSubscriber();
-      break;
-      case APDATE_MESSAGE_TEXT :
-        this._state.dialogsState.newMessageText = action.newMessageText;
-        this._callSubscriber();
-      break;
-    }
+    this._callSubscriber();
   }
 }
 
