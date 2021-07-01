@@ -56,15 +56,5 @@ let store = {
   }
 }
 
-
-export let addPostCreator = () => ({type: ADD_POST});
-
-export let apdatePostTextCreator = (text) => ({type: APDATE_POST_TEXT, newText: text});
-
-export let addMessageCreator = () => ({type: ADD_MESSAGE});
-
-export let apdateMessageTextCreator = (text) => ({type:APDATE_MESSAGE_TEXT, newMessageText: text}); 
-
-
 export default store;
 window.store = store;
