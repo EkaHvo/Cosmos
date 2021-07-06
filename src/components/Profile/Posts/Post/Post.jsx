@@ -2,6 +2,13 @@ import React from 'react';
 import c from './Post.module.css';
 
 const Post = (props) => {
+
+  let index = props.index;
+
+  let onRemovePost = () => {
+    props.removePost(index);
+  }
+
   return (
       <div className={c.item}>
         <div className={c.post}>        
@@ -17,6 +24,7 @@ const Post = (props) => {
             <span>{ props.dislikesCount }</span>
             &#128078;
           </div>
+          <button onClick = {onRemovePost} className={c.delete}>Delete</button>
         </div>
 
       </div>

@@ -1,30 +1,29 @@
 import React from 'react';
 import Post from './Post/Post';
-import { addPostCreator, apdatePostTextCreator } from '../../../redux/profile-reducer';
 import c from './Posts.module.css';
 
 
 const Posts = (props) => {
   
-  let postElements = props.profileState.posts.map( post => <Post message={ post.text } likesCount= { post.likesCount }/>);
+  let postElements = props.posts.map( (post, index) => <Post index = {index} message={ post.text } likesCount= { post.likesCount } dislikesCount= { post.dislikesCount } removePost = {props.removePost}/>);
 
   let newPostElem = React.createRef();
 
-  let addPost = () => {
-    props.dispatch(addPostCreator());
+  let onAddPost = () => {
+    props.addPost();
   }
 
-  let apdatePostText = () => {
+  let onApdatePostText = () => {
     let text = newPostElem.current.value;
-    props.dispatch(apdatePostTextCreator(text));
+    props.apdatePostText(text);
   }
 
   return (
     <div className={c.postsWrapper}>
       <div className={c.postsArea}>
         <h2 className={c.title}>My posts</h2>
-        <textarea ref={newPostElem} onChange={ apdatePostText } value={ props.profileState.newPostText }/>
-        <button onClick={ addPost } className={c.btn}>Add</button>
+        <textarea ref={ newPostElem } onChange={ onApdatePostText } value={ props.newPostText }/>
+        <button onClick={ onAddPost } className={c.btn}>Add</button>
       </div>
       <div className={c.posts}>
         { postElements }

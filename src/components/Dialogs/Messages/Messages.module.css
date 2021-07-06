@@ -1,0 +1,35 @@
+.btn {
+  margin: 20px 0 30px auto;
+  display: block;
+  padding: 10px 55px;
+  font-size: 18px;
+  color: white;
+  background-color: #06002a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newMessage {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+.newMessage {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  min-height: 140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-image: url(../../../main-banner.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  resize: none;
+}

@@ -28,12 +28,20 @@
   justify-content: flex-end;
 }
 
-.like,
-.dislike {
+.rating > div,
+.rating > button {
   margin: 0 10px;
   padding: 10px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+.delete {
+  display: block;
+  color: white;
+  background-color: #06002a;
+  border: none;
+  border-radius: 5px;
 }
 
 .like span,

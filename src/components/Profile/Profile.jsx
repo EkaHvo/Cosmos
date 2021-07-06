@@ -1,13 +1,12 @@
 import React from 'react';
-import Posts from './Posts/Posts';
+import PostsContainer from './Posts/PostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-// import c from './Profile.module.css';
 
-const Profile = (props) => {
+const Profile = () => {
   return (
     <div>
       <ProfileInfo name='Jake Sully' birthday='24 August 2126' place='Pandora'/>
-      <Posts profileState={ props.profileState } dispatch={ props.dispatch }/>
+      <PostsContainer/>
     </div>
   )
 }
